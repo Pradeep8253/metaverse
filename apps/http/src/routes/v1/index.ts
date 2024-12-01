@@ -2,11 +2,23 @@ import {Router} from "express";
 import { userRouter } from "./user";
 import { adminRouter } from "./admin";
 import { spaceRouter } from "./space";
+import { SignupSchema } from "../../types";
+import client from "@repo/db/client";
 
 export const router = Router() ;
 
 router.post("/signup" , (req , res)  => {
-    res.json({message : "signup success"})
+   const parseData  =  SignupSchema.safeParse(req.body)
+   if(!parseData.success) {
+      res.status(400).json({message : "validation failed "})
+      return ;
+   }
+
+   try {
+    client
+   } catch (error) {
+    
+   }
 })
 
 
