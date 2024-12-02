@@ -82,9 +82,6 @@ CREATE UNIQUE INDEX "User_id_key" ON "User"("id");
 CREATE UNIQUE INDEX "User_username_key" ON "User"("username");
 
 -- CreateIndex
-CREATE UNIQUE INDEX "User_password_key" ON "User"("password");
-
--- CreateIndex
 CREATE UNIQUE INDEX "Space_id_key" ON "Space"("id");
 
 -- CreateIndex
